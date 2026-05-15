@@ -1,0 +1,110 @@
+body{
+background:#0f172a;
+color:white;
+font-family:Arial;
+text-align:center;
+}
+
+/* Title */
+
+h1{
+color:#38bdf8;
+margin-top:20px;
+}
+
+/* Dashboard Cards */
+
+.dashboard{
+display:flex;
+justify-content:center;
+gap:30px;
+margin:20px;
+}
+
+.card{
+background:#1e293b;
+padding:15px;
+border-radius:10px;
+font-size:18px;
+font-weight:bold;
+}
+
+/* Search Bar */
+
+input{
+padding:8px;
+border-radius:6px;
+border:none;
+margin-right:10px;
+}
+
+/* Table */
+
+table{
+margin:auto;
+border-collapse:collapse;
+width:95%;
+background:#1e293b;
+}
+
+th{
+background:#38bdf8;
+color:black;
+padding:10px;
+}
+
+td{
+padding:10px;
+}
+
+tr:nth-child(even){
+background:#334155;
+}
+
+/* Overdue Highlight */
+
+.overdue{
+background:#7f1d1d;
+}
+
+/* Buttons */
+
+button{
+padding:7px 15px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+font-weight:bold;
+}
+
+/* Add Violation Button */
+
+.addbtn{
+background:#22c55e;
+color:white;
+}
+
+/* Paid Button */
+
+.paybtn{
+background:#facc15;
+color:black;
+}
+
+/* Delete Button */
+
+.delbtn{
+background:red;
+color:white;
+}
+
+/* Search Button */
+
+form button{
+background:#2563eb;
+color:white;
+}
+
+form button:hover{
+background:#1d4ed8;
+}
