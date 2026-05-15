@@ -119,10 +119,10 @@ Fields:
 
 # 🚀 Future Improvements
 
-- 📈 Add charts and analytics dashboard
-- 📧 Email/SMS fine notifications
-- 🔐 Admin login authentication
-- 🌍 Deploy online
-- 🤖 AI-based vehicle number detection
+-  Add charts and analytics dashboard
+-  Email/SMS fine notifications
+-  Admin login authentication
+-  Deploy online
+-  AI-based vehicle number detection
 
 ---
