@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+
+<body>
+
+<h1>Add Traffic Violation</h1>
+
+<form method="POST">
+
+Vehicle Number
+
+<br>
+
+<input type="text"
+name="vehicle"
+pattern="[A-Z]{2}[0-9]{2}[A-Z]{2}[0-9]{4}"
+title="Example TN10AB1234"
+required>
+
+<br><br>
+
+Vehicle Type
+
+<br>
+
+<select name="vehicle_type">
+
+<option>Bike</option>
+<option>Car</option>
+<option>Bus</option>
+<option>Truck</option>
+<option>Auto</option>
+
+</select>
+
+<br><br>
+
+Violation Type
+
+<br>
+
+<select name="violation" id="violation" onchange="setFine()">
+
+<option value="No Helmet">No Helmet</option>
+<option value="Overspeeding">Overspeeding</option>
+<option value="Signal Jump">Signal Jump</option>
+<option value="No Seatbelt">No Seatbelt</option>
+<option value="Wrong Parking">Wrong Parking</option>
+<option value="custom">Other</option>
+
+</select>
+
+<br><br>
+
+<input type="text"
+id="customViolation"
+name="customViolation"
+placeholder="Custom violation"
+style="display:none;">
+
+<br><br>
+
+Location
+
+<br>
+
+<input type="text" name="location">
+
+<br><br>
+
+Date
+
+<br>
+
+<input type="date" name="date" value="{{today}}">
+
+<br><br>
+
+Fine
+
+<br>
+
+<input type="number" id="fine" name="fine">
+
+<br><br>
+
+<button class="addbtn">Submit</button>
+
+</form>
+
+<script>
+
+function setFine(){
+
+let v=document.getElementById("violation").value
+let fine=document.getElementById("fine")
+let custom=document.getElementById("customViolation")
+
+if(v=="No Helmet"){fine.value=500}
+else if(v=="Overspeeding"){fine.value=1000}
+else if(v=="Signal Jump"){fine.value=800}
+else if(v=="No Seatbelt"){fine.value=500}
+else if(v=="Wrong Parking"){fine.value=300}
+else{
+fine.value=""
+custom.style.display="block"
+}
+
+}
+
+</script>
+
+</body>
+</html>

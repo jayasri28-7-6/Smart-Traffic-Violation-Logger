@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+<title>Smart Traffic Logger</title>
+</head>
+
+<body>
+
+<h1>🚦 Smart Traffic Violation Logger 🚦</h1>
+
+<div class="dashboard">
+
+<div class="card">Total Violations<br>{{total}}</div>
+<div class="card">Paid<br>{{paid}}</div>
+<div class="card">Unpaid<br>{{unpaid}}</div>
+
+</div>
+
+<form method="GET">
+
+<input type="text" name="search" placeholder="Search Vehicle">
+
+<button>Search</button>
+
+</form>
+
+<br>
+
+<a href="/add"><button class="addbtn">Add Violation</button></a>
+
+<br><br>
+
+<table>
+
+<tr>
+
+<th>Vehicle</th>
+<th>Type</th>
+<th>Violation</th>
+<th>Location</th>
+<th>Date</th>
+<th>Fine</th>
+<th>Status</th>
+<th>QR</th>
+<th>Action</th>
+
+</tr>
+
+{% for r in records %}
+
+<tr>
+
+<td>{{r.vehicle}}</td>
+<td>{{r.vehicle_type}}</td>
+<td>{{r.violation}}</td>
+<td>{{r.location}}</td>
+<td>{{r.date}}</td>
+<td>{{r.fine}}</td>
+<td>{{r.status}}</td>
+
+<td>
+
+<img src="{{ url_for('static', filename='qr/' + r.id|string + '.png') }}" width="80">
+
+<br>
+
+
+
+</td>
+
+<td>
+
+<a href="/status/{{r.id}}">View</a>
+
+<br><br>
+
+<a href="/pay/{{r.id}}">
+<button class="paybtn">Paid</button>
+</a>
+
+<a href="/delete/{{r.id}}" onclick="return confirm('Delete this violation?')">
+<button class="delbtn">Delete</button>
+</a>
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+</html>
