@@ -4,19 +4,19 @@ A Python-based web application that helps traffic authorities manage and monitor
 
 ---
 
-# 📌 Features
+# Features
 
-- 🚗 Add traffic violation records
-- 🔍 Search vehicle records
-- 📊 Dashboard showing total, paid, and unpaid violations
-- 💳 Mark fines as paid
-- 🗑️ Delete violation records
-- 📷 Automatic QR code generation for each violation
-- 🌐 Simple and interactive web interface
+-  Add traffic violation records
+-  Search vehicle records
+-  Dashboard showing total, paid, and unpaid violations
+-  Mark fines as paid
+-  Delete violation records
+-  Automatic QR code generation for each violation
+-  Simple and interactive web interface
 
 ---
 
-# 🛠️ Technologies Used
+# Technologies Used
 
 - Python
 - Flask
@@ -28,7 +28,7 @@ A Python-based web application that helps traffic authorities manage and monitor
 
 ---
 
-# 📂 Project Structure
+# Project Structure
 
 ```bash
 traffic_logger/
@@ -46,7 +46,7 @@ traffic_logger/
 
 ---
 
-# ⚙️ Installation
+# Installation
 
 ## Clone the repository
 
@@ -65,7 +65,7 @@ pip install flask flask_sqlalchemy qrcode pillow
 
 ---
 
-# ▶️ How to Run
+# How to Run
 
 ```bash
 python app.py
@@ -73,7 +73,7 @@ python app.py
 
 ---
 
-# 🌐 Output
+# Output
 
 - Opens automatically in your browser
 - Displays all traffic violation records
@@ -82,7 +82,7 @@ python app.py
 
 ---
 
-# 📊 Example Features
+# Example Features
 
 - View all violation records
 - Search using vehicle number
@@ -92,7 +92,7 @@ python app.py
 
 ---
 
-# 🗃️ Database
+# Database
 
 This project uses SQLite database:
 
@@ -117,7 +117,7 @@ Fields:
 
 ---
 
-# 🚀 Future Improvements
+# Future Improvements
 
 -  Add charts and analytics dashboard
 -  Email/SMS fine notifications
